@@ -16,8 +16,8 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v2
       with:
-        source_repo: "git@github.com:Christy99cc/blog.git"
+        source_repo: "https://Christy99cc:${{ secrets.SSH_PRIVATE_KEY }}@github.com/Christy99cc/blog.git"
         source_branch: "master/docs/*"
-        destination_repo: "git@github.com:Christy99cc/Christy99cc.github.io.git"
+        destination_repo: "https://Christy99cc:${{ secrets.SSH_PRIVATE_KEY }}@github.com/Christy99cc/Christy99cc.github.io.git"
         destination_branch: "master/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
