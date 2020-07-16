@@ -1,3 +1,4 @@
+
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -23,6 +24,6 @@ jobs:
         DESTINATION_BRANCH: master
       run: |
         git clone $SOURCE_REPO && cd $SOURCE_REPO_NAME
-        npm install && npm install hexo -g
+        npm install && sudo npm install hexo -g
         hexo generate && cd docs
         git remote add origin $DESTINATION_REPO && git add . && git commit -m "Update blog" && git push -f origin $DESTINATION_BRANCH
