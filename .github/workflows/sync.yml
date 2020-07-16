@@ -13,10 +13,15 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-    - name: repo-sync
-      uses: wei/git-sync@v2
+    - name: Clone Source Repo
       with:
-        source_repo: "https://Christy99cc:${{ secrets.SSH_PRIVATE_KEY }}@github.com/Christy99cc/blog.git"
-        source_branch: "master/docs"
-        destination_repo: "https://Christy99cc:${{ secrets.SSH_PRIVATE_KEY }}@github.com/Christy99cc/Christy99cc.github.io.git"
+        source_repo: "https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/blog.git"
+        source_repo_name: "blog"
+        source_branch: "master"
+        destination_repo: "https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/Christy99cc.github.io.git"
         destination_branch: "master"
+      run: cd /tmp && git clone ${{ source_repo }}:${{ source_branch }} && cd ${{ source_repo_name }}
+    - name: Hexo generate
+      run: hexo generate && cd docs
+    - name: Push to dist repo\
+      run: git remote add origin ${{ destination_repo }} && git add . && git commit -m "Update blog" && git push -f origin master
