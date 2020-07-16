@@ -14,14 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Clone Source Repo
-      with:
-        source_repo: "https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/blog.git"
-        source_repo_name: "blog"
-        source_branch: "master"
-        destination_repo: "https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/Christy99cc.github.io.git"
-        destination_branch: "master"
-      run: cd /tmp && git clone ${{ source_repo }}:${{ source_branch }} && cd ${{ source_repo_name }}
-    - name: Hexo generate
-      run: hexo generate && cd docs
-    - name: Push to dist repo\
-      run: git remote add origin ${{ destination_repo }} && git add . && git commit -m "Update blog" && git push -f origin master
+      working-directory: /tmp
+      env:
+        SOURCE_REPO: https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/blog.git
+        SOURCE_REPO_NAME: blog
+        SOURCE_BRANCH: master
+        DESTINATION_REPO: https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/Christy99cc.github.io.git
+        DESTINATION_BRANCH: master
+      run: |
+        git clone $SOURCE_REPO:$SOURCE_BRANCH && cd $SOURCE_REPO_NAME
+        npm install && npm install hexo -g
+        hexo generate && cd docs
+        git remote add origin $DESTINATION_REPO && git add . && git commit -m "Update blog" && git push -f origin $DESTINATION_BRANCH
