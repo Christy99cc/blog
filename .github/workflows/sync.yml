@@ -23,6 +23,8 @@ jobs:
         DESTINATION_REPO: https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/Christy99cc.github.io.git
         DESTINATION_BRANCH: master
       run: |
+        git config --global user.email "christy99cc@qq.com"
+        git config --global user.name "Christy99cc"
         git clone $SOURCE_REPO && cd $SOURCE_REPO_NAME && rm -rf .git
         npm install && sudo npm install hexo -g
         hexo generate && cd docs &&  git init
