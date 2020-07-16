@@ -22,7 +22,7 @@ jobs:
         DESTINATION_REPO: https://Christy99cc:${{ secrets.ACCESS_TOKEN }}@github.com/Christy99cc/Christy99cc.github.io.git
         DESTINATION_BRANCH: master
       run: |
-        git clone $SOURCE_REPO:$SOURCE_BRANCH && cd $SOURCE_REPO_NAME
+        git clone $SOURCE_REPO && cd $SOURCE_REPO_NAME
         npm install && npm install hexo -g
         hexo generate && cd docs
         git remote add origin $DESTINATION_REPO && git add . && git commit -m "Update blog" && git push -f origin $DESTINATION_BRANCH
