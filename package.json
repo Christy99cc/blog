@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "develop":"npm install hexo -g && hexo clean && hexo generate"
+    "dev": "hexo s"
   },
   "hexo": {
     "version": "4.2.1"
