@@ -16,3 +16,4 @@ fields:
   label: 分类
 pages:
 - source/_posts/01分布式系统概述.md
+- source/_posts/02.md
