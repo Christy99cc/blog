@@ -6,7 +6,6 @@ tags:
 categories: ''
 
 ---
-# 模型的选择问题+数据集的划分
 
 ![image](https://cdn.sparkling.land/christy/images/C59348C4-0008-49F1-A0F6-08E662F509C62.jpg)￼
 
