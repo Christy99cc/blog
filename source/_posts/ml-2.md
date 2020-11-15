@@ -1,7 +1,8 @@
 ---
-title: "【ML】"
+title: "【ML】随机初始化"
 date: 2020-11-14T16:00:00Z
-tags: []
+tags:
+- 机器学习
 categories: ''
 
 ---
