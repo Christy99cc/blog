@@ -28,9 +28,8 @@ categories: ''
 使用如下命令就能把默认进入base虚拟环境关掉了。
 ```conda config --set auto_activate_base false```
 
-参考链接：[https://blog.csdn.net/ben1010101010/article/details/90897405?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control](https://blog.csdn.net/ben1010101010/article/details/90897405?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control)￼
 
-如果需要进入base虚拟环境，`conda activate`
+另外，如果需要进入base虚拟环境，`conda activate`
 退出当前虚拟环境，`conda deactivate`
 
 
