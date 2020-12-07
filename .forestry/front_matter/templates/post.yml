@@ -16,6 +16,7 @@ fields:
   label: 分类
 pages:
 - source/_posts/01分布式系统概述.md
+- source/_posts/anaconda-vscode-pytorch.md
 - source/_posts/ml-1.md
 - source/_posts/ml-10.md
 - source/_posts/ml-11.md
