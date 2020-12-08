@@ -26,23 +26,37 @@ categories: ''
 #### 打开终端的有(base)字样
 新版的Anaconda会在每一个新开的terminal里面自动进入虚拟环境base。看着有些强迫症犯了。
 使用如下命令就能把默认进入base虚拟环境关掉了。
-```conda config --set auto_activate_base false```
+```
+conda config --set auto_activate_base false
+```
 
 
-另外，如果需要进入base虚拟环境，`conda activate`
-退出当前虚拟环境，`conda deactivate`
+另外，如果需要进入base虚拟环境
+```
+conda activate
+```
+
+退出当前虚拟环境
+```
+conda deactivate
+```
 
 
 ### 为PyTorch新建虚拟环境
 
 1. 新建虚拟环境，命名为pytorch，指定python版本为3.6。
+
 ```
 conda create --name pytorch python=3.6
-```￼
+
+```
+
 2. 安装好之后，进入pytorch虚拟环境。
+
 ```
 conda activate pytorch
-```￼
+
+```
 
 ### 安装PyTorch
 在pytorch虚拟环境中安装PyTorch。要注意，先进入pytorch虚拟环境。
@@ -53,15 +67,17 @@ conda activate pytorch
 根据官网，安装PyTorch。
 ```
 conda install pytorch torchvision torchaudio -c pytorch
-```￼
+
+```
 
 ### VSCode配置python
-参考链接
+参考官方链接
 [https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)￼
 
 #### 下载安装VSCode
 官网下载，附上链接
 [https://code.visualstudio.com](https://code.visualstudio.com)￼
+
 #### 下载python插件
 
 在VSCode的应用商店中搜索Python，并下载
@@ -73,11 +89,12 @@ conda install pytorch torchvision torchaudio -c pytorch
 验证python是否安装
 ```
 python3 --version
-```￼
+```
+
 由于我使用pytorch环境下的python，需要先进入该环境。
 ```
 conda activate pytorch
-```￼
+```
 
 ![image](https://cdn.sparkling.land/christy/images/9308D293-6DEC-471C-A3A3-5DF2F497344D.jpg)￼
 
@@ -128,16 +145,16 @@ Note：代码补全要用IntelliCode，不要用Pylance（要卸掉）
     "editor.suggest.filterGraceful": false,
     "editor.suggest.showStructs": false,
     "editor.suggest.showUsers": false,
-```￼
+```
 
 将下面这行的null改为true，即将
 ```
 "editor.quickSuggestions": null,
-```￼
+```
 改为
 ```
 "editor.quickSuggestions": true,
-```￼
+```
 
 ##### 如何打开全局的setting.json
 点击 code => 首选项 => 设置，随便找一项设置，点击**在setting.json中编辑**，（再删掉新加的代码就好了），不知道有什么其他的好方法。
