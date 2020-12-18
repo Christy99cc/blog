@@ -69,11 +69,15 @@ macOS上安装没有什么需要注意的地方。下载好之后，双击进行
 
 1. 新建虚拟环境，命名为pytorch，指定python版本为3.6。
 
+	```
     conda create --name pytorch python=3.6
+    ```
 
 2. 安装好之后，进入pytorch虚拟环境。
 
+	```
     conda activate pytorch
+    ```
 
 ### 安装PyTorch
 
