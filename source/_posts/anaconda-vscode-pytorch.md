@@ -54,16 +54,21 @@ macOS上安装没有什么需要注意的地方。下载好之后，双击进行
 
 新版的Anaconda会在每一个新开的terminal里面自动进入虚拟环境base。看着有些强迫症犯了。
 使用如下命令就能把默认进入base虚拟环境关掉了。
-
+    ```
     conda config --set auto_activate_base false
+    ```
 
 另外，如果需要进入base虚拟环境
 
+    ```
     conda activate
+    ```
 
 退出当前虚拟环境
 
-    conda deactivate
+    ```
+     conda deactivate
+    ```
 
 ### 为PyTorch新建虚拟环境
 
@@ -90,14 +95,18 @@ macOS上安装没有什么需要注意的地方。下载好之后，双击进行
 
 #### MacOS
 
+    ```
     conda install pytorch torchvision torchaudio -c pytorch
+    ```
 
 #### Win
 
 > 要选择对应的cuda版本的，如果没有GPU就要选择None
 
+    ```
     conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
-
+    ```
+    
 ### VSCode配置python
 
 参考官方链接
@@ -190,3 +199,11 @@ Note：代码补全要用IntelliCode，不要用Pylance（要卸掉）
 ### 其他
 
 当然啦，PyCharm也是很好的选择\~也推荐\~
+
+### 用conda安装opencv
+
+    ```
+    conda install opencv3 -c anaconda
+    ```
+    
+c是channel的意思，要指定anaconda或者menpo做channel才行。
