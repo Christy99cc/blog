@@ -1,14 +1,13 @@
 ---
 title: git拉取远程分支到本地
 date: 2021-03-24T16:00:00Z
-tags: []
+tags:
+- git
 categories: ''
 
 ---
 
-> 参考：
-[ ]: https://blog.csdn.net/carfge/article/details/79691360 
-
+> 参考： https://blog.csdn.net/carfge/article/details/79691360
 
 首先，进入本地仓库
 
